@@ -1,5 +1,6 @@
 package com.kanyideveloper.readforme;
 
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -7,6 +8,8 @@ import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
 
@@ -29,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                 speakOut();
             }
         });
-
     }
 
     @Override
@@ -44,13 +46,26 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
 
 
-    public void speakOut(){
+    private void speakOut(){
         String text  = textFld.getText().toString();
         tts.speak(text,TextToSpeech.QUEUE_FLUSH,null);
     }
 
     @Override
     public void onInit(int status) {
+        if(status == TextToSpeech.SUCCESS){
+            int result = tts.setLanguage(Locale.ENGLISH);
+            if(result == TextToSpeech.LANG_MISSING_DATA || result ==TextToSpeech.LANG_NOT_SUPPORTED){
+                Toast.makeText(MainActivity.this,"Language not found",Toast.LENGTH_SHORT).show();
+            }
+            else {
+                btn.setEnabled(true);
+                speakOut();
+            }
 
+        }
+        else {
+            Toast.makeText(MainActivity.this,"Initialization failed",Toast.LENGTH_SHORT).show();
+        }
     }
 }
