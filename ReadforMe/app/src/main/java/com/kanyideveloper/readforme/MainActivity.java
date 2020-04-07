@@ -12,7 +12,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
@@ -20,7 +19,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import ru.bartwell.exfilepicker.ExFilePicker;
 import ru.bartwell.exfilepicker.data.ExFilePickerResult;
-
 import java.io.*;
 import java.util.Locale;
 
@@ -32,15 +30,12 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
     String fileName;
     String textToSpeak;
     private static final int NO_OF_FILES = 0;
-
     private static  final int PERMISSION_REQUEST_STORAGE = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
          != PackageManager.PERMISSION_GRANTED){
@@ -71,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
     @Override
     protected void onDestroy() {
-
         if(tts != null){
             tts.stop();
             tts.shutdown();
@@ -79,13 +73,9 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         super.onDestroy();
     }
 
-
-
     private void speakOut(){
-
         tts.speak(textToSpeak,TextToSpeech.QUEUE_FLUSH,null);
     }
-
 
     public void readContent() {
         File fl = new File(fileName);
@@ -100,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             }
 
             bf.close();
-
+            
              textToSpeak= sb.toString();
             tvFile.setText(sb.toString());
         }
@@ -109,8 +99,6 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         }
 
     }
-
-
 
 
     @Override
@@ -137,7 +125,6 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                 btn.setEnabled(true);
                 speakOut();
             }
-
         }
         else {
             Toast.makeText(MainActivity.this,"Initialization failed",Toast.LENGTH_SHORT).show();
@@ -156,6 +143,5 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                 readContent();
             }
         }
-
     }
     }
