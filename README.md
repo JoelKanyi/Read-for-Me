@@ -1,6 +1,10 @@
 # Read-for-Me
 transforms text to speech
 
+## Screenshots
+<p float="left">
+<img src="Screenshots/Screenshot_20200330-175204.jpg" width="100"/>
+  </p>
 
 
 ## Setup Requirements
