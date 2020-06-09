@@ -1,5 +1,7 @@
 # Read-for-Me
-An android app that transforms text to speech
+transforms text to speech
+
+
 
 ## Setup Requirements
 ----------------
