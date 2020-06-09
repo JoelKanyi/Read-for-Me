@@ -2,9 +2,8 @@
 transforms text to speech
 
 ## Screenshots
-<p float="left">
-<img src="Screenshots/Screenshot_20200330-175204.jpg" width="100"/>
-  </p>
+<img src="/readforme.jpeg" width="100"/>
+ 
 
 
 ## Setup Requirements
@@ -35,7 +34,7 @@ In order to get the app running yourself, you need to:
 feel free to contribute so that it can open and read .doc, .docx or .pdf files
 
 ## Get in touch - Let's become friends
------------------------------------
+----------------------------------/
 
 Please feel free to contact me if you have any questions, ideas or even if you just want to say hi. I’m up for talking, exchange ideas, collaborations or consults. You can connect with me through any of the avenues listed below:
 - [Twitter](https://twitter.com/kanyi_joel)
