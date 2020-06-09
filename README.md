@@ -2,7 +2,7 @@
 transforms text to speech
 
 ## Screenshots
-<img src="/readforme.jpeg" width="100"/>
+<img src="/readforme.jpeg" width="300" height= "600"/>
  
 
 
