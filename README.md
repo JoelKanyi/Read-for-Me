@@ -37,7 +37,7 @@ feel free to contribute so that it can open and read .doc, .docx or .pdf files
 ----------------------------------/
 
 Please feel free to contact me if you have any questions, ideas or even if you just want to say hi. I’m up for talking, exchange ideas, collaborations or consults. You can connect with me through any of the avenues listed below:
-- [Twitter](https://twitter.com/kanyi_joel)
+- [Twitter](https://twitter.com/_joelkanyi)
 - [Github](https://github.com/JoelKanyi)
 - [Facebook](https://www.facebook.com/joel.kanyi.71)
 - [LinkedIn](https://www.linkedin.com/in/joel-kanyi-037270174/) 
